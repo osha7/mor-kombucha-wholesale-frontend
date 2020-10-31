@@ -48,17 +48,59 @@ section {
   top: 0;
   bottom: 0;
   margin: auto;
+  border-radius: 5px;
+}
 
+.credentials {
+  color: #fff;
 }
 
 .logo-image {
   width: 20%;
+  animation-name: moveInLeft;
+    animation-duration: 1s;
+    /* animation-delay: 3s; */
+    /* animation-iteration-count: 3; */
+    animation-timing-function: ease-out;
+    
+}
+
+@keyframes moveInLeft {
+
+  0% {
+      opacity: 0;
+      transform: translateX(-100px);
+  }
+  80% {
+      transform: translateX(5px);
+  }
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
 }
 
 .form-input {
   border: none;
   border-radius: 1px;
   margin: 1px;
+  animation: moveInRight 1s ease-out;
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  margin-left: 20%;
+}
+
+@keyframes moveInRight {
+  0% {
+      opacity: 0;
+      transform: translateX(100px);
+  }
+  80% {
+      transform: translateX(-5px);
+  }
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
 }
 
 .form-submit {
@@ -73,8 +115,12 @@ section {
   text-transform: uppercase;
   border-radius: 1px;
   background-image: linear-gradient(to left,#FFC312, #EE5A24);
+  animation: moveInRight 1s ease-out;
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  margin-left: 40%;
 }
 
 .form-submit:hover {
-  background-position: right;
+  padding: 2px;
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
 }
