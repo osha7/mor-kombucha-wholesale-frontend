@@ -18,13 +18,18 @@ function Order() {
                 {/* <img src={hazy} className="hazy-keg" /> */}
               <div className="product-list">
                 <div className="card">
-                  <div className="imgBx" >
-                    <img src={hazy} />
+                <div className="imgBx" >
+                    <img className="kegs" src={hazy} />
                   </div>
                 </div>
                 <div className="card">
                   <div className="imgBx" >
-                    <img src={hazy} />
+                    <img className="kegs" src={hazy} />
+                  </div>
+                </div>
+                <div className="card">
+                  <div className="imgBx" >
+                    <img className="kegs" src={hazy} />
                   </div>
                 </div>
               </div>
