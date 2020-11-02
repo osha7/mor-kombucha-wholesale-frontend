@@ -1,7 +1,11 @@
 
-import logo from '../mor-logo.png'
-import hazy from '../hazykeg.png'
+import logo from '../mor-logo.png';
+import hazy from '../hazykeg.png';
+import mojito from '../mojitokeg.png';
+import pineapple from '../pineapplekeg.png';
+import ginger from '../gingerkeg.png';
 import '../Order.css';
+import kegSizes from './keg-options';
 
 
 function Order() {
@@ -17,21 +21,62 @@ function Order() {
               </div>
                 {/* <img src={hazy} className="hazy-keg" /> */}
               <div className="product-list">
-                <div className="card">
-                <div className="imgBx" >
-                    <img className="kegs" src={hazy} />
+                <div className="product-card">
+                  <div className="card">
+                    <div className="imgBx" >
+                      <img id="kegs" src={hazy} />
+                    </div>
+                  </div>
+                  <div>
+                    <label for="keg-options">Keg Options:</label><br />
+                    <select id="keg-options" name="keg-options">
+                      {kegSizes.map(kegSize => <option key={kegSize} value={kegSize}>{kegSize}</option>)}
+                    </select>
                   </div>
                 </div>
-                <div className="card">
-                  <div className="imgBx" >
-                    <img className="kegs" src={hazy} />
+                
+                <div className="product-card">
+                  <div className="card">
+                    <div className="imgBx" >
+                      <img id="kegs" src={mojito} />
+                    </div>
+                  </div>
+                  <div>
+                    <label for="keg-options">Keg Options:</label><br />
+                    <select id="keg-options" name="keg-options">
+                      {kegSizes.map(kegSize => <option key={kegSize} value={kegSize}>{kegSize}</option>)}
+                    </select>
                   </div>
                 </div>
-                <div className="card">
-                  <div className="imgBx" >
-                    <img className="kegs" src={hazy} />
+                
+                <div className="product-card">
+                  <div className="card">
+                    <div className="imgBx" >
+                      <img id="kegs" src={pineapple} />
+                    </div>
+                  </div>
+                  <div>
+                    <label for="keg-options">Keg Options:</label><br />
+                    <select id="keg-options" name="keg-options">
+                      {kegSizes.map(kegSize => <option key={kegSize} value={kegSize}>{kegSize}</option>)}
+                    </select>
                   </div>
                 </div>
+
+                <div className="product-card">
+                  <div className="card">
+                    <div className="imgBx" >
+                      <img id="kegs" src={ginger} />
+                    </div>
+                  </div>
+                  <div>
+                    <label for="keg-options">Keg Options:</label><br />
+                    <select id="keg-options" name="keg-options">
+                      {kegSizes.map(kegSize => <option key={kegSize} value={kegSize}>{kegSize}</option>)}
+                    </select>
+                  </div>
+                </div>
+
               </div>
             </div>
         </section>
